@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
-<meta name="theme-color" content="#f4f3ef">
+<meta name="theme-color" content="#0c3048">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <link rel="icon" href="{{ '/assets/images/favicon.jpg' | relative_url }}?v={{ site.time | date: '%s' }}" type="image/jpeg">
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
@@ -16,7 +16,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <div class="site-shell">
 <aside class="left-sidebar">
-  <div class="identity"><a class="avatar" href="{{ '/' | relative_url }}" aria-label="Charlie’s Tech Blog home"><span>C</span></a><div><a class="site-name" href="{{ '/' | relative_url }}">Charlie's Tech Blog</a><p class="site-description">Cyber security student.<br>Brisbane, Australia.</p></div></div>
+  <div class="identity"><div><a class="site-name" href="{{ '/' | relative_url }}">Charlie's Tech Blog</a><p class="site-description">Cyber security, home labs<br>and PC troubleshooting.</p></div></div>
   <div class="social-links"><a href="https://github.com/Doctoten" aria-label="Charlie on GitHub">{% include icon.html name='github' %}</a><a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS feed"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="5" cy="19" r="1"/><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/></svg></a></div>
   <button class="mobile-menu" aria-controls="site-nav" aria-expanded="false">{% include icon.html name='menu' %}<span>Menu</span></button>
   <nav id="site-nav" aria-label="Main navigation">
@@ -26,11 +26,12 @@
     <a href="{{ '/search/' | relative_url }}" {% if page.url == '/search/' %}aria-current="page"{% endif %}>{% include icon.html name='search' %}<span>Search</span></a>
     <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>{% include icon.html name='user' %}<span>About</span></a>
   </nav>
-  <div class="sidebar-bottom"><span class="location">Brisbane, Australia</span><button class="theme-toggle" aria-label="Switch colour theme" aria-pressed="false">{% include icon.html name='moon' %}<span>Dark mode</span></button></div>
+  <div class="sidebar-bottom"><span class="language-label">English</span><button class="theme-toggle" aria-label="Switch colour theme" aria-pressed="false">{% include icon.html name='moon' %}<span>Dark mode</span></button></div>
 </aside>
-<main id="main" tabindex="-1">{{ content }}<footer class="site-footer">© {{ site.time | date: '%Y' }} Charlie · <a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="https://github.com/Doctoten/Doctoten.github.io">Source</a></footer></main>
+<main id="main" tabindex="-1">{{ content }}<footer class="site-footer">© {{ site.time | date: '%Y' }} Charlie's Tech Blog<br> <a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="https://github.com/Doctoten/Doctoten.github.io">Source</a></footer></main>
 <aside class="right-sidebar" aria-label="Blog tools">
-<form class="search-box glass" action="{{ '/search/' | relative_url }}" method="get"><label for="sidebar-search">SEARCH</label><div><input id="sidebar-search" name="q" placeholder="Find an article…" type="search"><button aria-label="Search blog">{% include icon.html name='search' %}</button></div></form>
+<form class="search-box glass" action="{{ '/search/' | relative_url }}" method="get"><label class="sr-only" for="sidebar-search">Search articles</label><div><input id="sidebar-search" name="q" placeholder="Search articles, tags, keywords…" type="search"><button aria-label="Search blog">{% include icon.html name='search' %}</button></div></form>
+<section class="site-state"><h2>Published</h2><div class="stats"><a href="{{ '/archives/' | relative_url }}"><strong>{{ site.posts | size }}</strong><span>Posts</span></a><a href="{{ '/search/' | relative_url }}"><strong>{{ site.categories | size }}</strong><span>Categories</span></a><a href="{{ '/search/' | relative_url }}"><strong>{{ site.tags | size }}</strong><span>Tags</span></a></div></section>
 <section class="widget"><div class="widget-heading">{% include icon.html name='archive' %}<h2>Archives</h2></div><div class="glass archive-widget">{% assign years = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}{% for year in years %}<a href="{{ '/archives/' | relative_url }}#year-{{ year.name }}"><span>{{ year.name }}</span><span>{{ year.items | size }}</span></a>{% endfor %}{% if site.posts.size == 0 %}<p>No posts yet.</p>{% endif %}</div></section>
 <section class="widget"><div class="widget-heading">{% include icon.html name='projects' %}<h2>Categories</h2></div><div class="tag-cloud">{% for category in site.categories %}<a class="chip glass" href="{{ '/search/' | relative_url }}?category={{ category[0] | url_encode }}">{{ category[0] | escape }} <small>{{ category[1] | size }}</small></a>{% endfor %}</div></section>
 <section class="widget"><div class="widget-heading">{% include icon.html name='tag' %}<h2>Tags</h2></div><div class="tag-cloud">{% for tag in site.tags %}<a class="chip glass" href="{{ '/search/' | relative_url }}?tag={{ tag[0] | url_encode }}">{{ tag[0] | escape }}</a>{% endfor %}</div></section>

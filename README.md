@@ -27,10 +27,10 @@ Optional: add `image: /assets/images/your-image.jpg` and `image_alt: "Descriptio
 - `about.md`: biography.
 - `projects.md`: projects; replace the existing placeholders with your actual work.
 - `assets/css/style.css`: colours, spacing and responsive layout.
-- Background: upload a real image into `assets/images/`, then set `background_image: "/assets/images/landscape.png"` in `_config.yml`. A blank value uses the plain background.
+- Background: upload a real image into `assets/images/`, then set `background_image: "/assets/images/landscape.png"` in `_config.yml`. The current background is `landscape.webp`, an optimized copy of the uploaded `landscape.png`. To use a newly uploaded PNG directly, change `background_image` to its path. A blank value uses the plain background.
 - Favicon: the site uses `assets/images/favicon.jpg`. Replace that file to change the browser icon.
 - `_layouts/` and `_includes/`: page templates and shared elements.
 
 Search, categories, tags and archives update automatically from published posts. The light/dark choice is stored in the visitor's browser. No analytics, paid services or backend are required.
 
-The three-column layout takes inspiration from blog.lynxflow.co, with simple typography, solid surfaces and native scrolling. There are no backdrop blur effects, external font downloads or scroll animation scripts.
+The interface follows the English three-column layout at blog.lynxflow.co/en/: left navigation, central article cards, and right search/archive/tag widgets. It uses the user’s background, Lato fonts hosted locally under their SIL Open Font License, translucent surfaces and native scrolling. No backdrop blur or scroll animation scripts are used.

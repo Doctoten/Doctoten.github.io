@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-<header class="home-intro"><h1>Charlie's notes</h1><div class="intro-copy">{{ content }}</div></header>
-<section class="post-list" aria-label="Recent posts"><header class="section-heading"><h2>Latest posts</h2><a href="{{ '/archives/' | relative_url }}">All posts {% include icon.html name='arrow' %}</a></header>
-{% for post in site.posts limit: 8 %}{% include post-card.html post=post %}{% endfor %}
-{% if site.posts.size == 0 %}<p class="empty-state">No posts yet.</p>{% endif %}</section>
-<section class="project-notes"><h2>Projects</h2><p>I'll add write-ups here as I work on them.</p><a href="{{ '/projects/' | relative_url }}#proxmox-home-lab">Proxmox home lab <span>Notes coming soon</span>{% include icon.html name='arrow' %}</a><a href="{{ '/projects/' | relative_url }}#pc-building-and-troubleshooting">PC building & troubleshooting <span>Notes coming soon</span>{% include icon.html name='arrow' %}</a></section>
+<header class="section-heading"><h1>Latest posts</h1><a href="{{ '/archives/' | relative_url }}">All posts →</a></header>
+<section class="post-list" aria-label="Recent posts">{% for post in site.posts limit: 10 %}{% include post-card.html post=post %}{% endfor %}
+{% if site.posts.size == 0 %}<div class="page-card empty-state"><p>No posts published yet.</p></div>{% endif %}</section>
