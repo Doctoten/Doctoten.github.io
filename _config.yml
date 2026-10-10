@@ -1,9 +1,28 @@
-title: Charlie's Tech Blog
+title: "Charlie's Tech Blog"
+name: Charlie
 description: Cyber Security student sharing homelab projects and IT troubleshooting.
 url: "https://doctoten.github.io"
 baseurl: ""
-theme: minima
-
+timezone: Australia/Brisbane
+lang: en
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Charlie
 header_pages:
   - about.md
   - projects.md

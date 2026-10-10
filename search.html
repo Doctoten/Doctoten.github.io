@@ -1,0 +1,8 @@
+---
+layout: page
+title: Search
+description: Find a note, topic or idea.
+permalink: /search/
+---
+<form class="main-search" action="{{ '/search/' | relative_url }}" method="get"><label class="sr-only" for="main-query">Search articles</label><input id="main-query" name="q" type="search" placeholder="Search the notebook…" autocomplete="off"><button class="button" type="submit">Search</button></form>
+<p id="search-status" role="status" aria-live="polite">Type a title, keyword or topic to start.</p><div id="search-results"></div><noscript><p>Enable JavaScript to search, or <a href="{{ '/archives/' | relative_url }}">browse all posts in the archives</a>.</p></noscript>
