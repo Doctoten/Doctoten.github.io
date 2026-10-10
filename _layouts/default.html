@@ -6,7 +6,7 @@
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
 <meta name="theme-color" content="#0c3048">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
-<link rel="icon" href="{{ '/assets/images/favicon.jpg' | relative_url }}?v={{ site.time | date: '%s' }}" type="image/jpeg">
+<link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}?v={{ site.time | date: '%s' }}" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 {% if site.background_image and site.background_image != "" %}<style>body::before{background-image:url({{ site.background_image | relative_url | jsonify }});}</style>{% endif %}
 <script>try{document.documentElement.dataset.theme=localStorage.getItem('charlie-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){}</script>
@@ -16,7 +16,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <div class="site-shell">
 <aside class="left-sidebar">
-  <div class="identity"><div><a class="site-name" href="{{ '/' | relative_url }}">Charlie's Tech Blog</a><p class="site-description">Cyber security, home labs<br>and PC troubleshooting.</p></div></div>
+  <div class="identity">{% if site.avatar_image %}<a class="site-avatar" href="{{ '/' | relative_url }}" aria-label="Charlie's blog home"><img src="{{ site.avatar_image | relative_url }}" alt="Charlie's avatar" width="100" height="100" decoding="async"></a>{% endif %}<div><a class="site-name" href="{{ '/' | relative_url }}">Charlie's Tech Blog</a><p class="site-description">Cyber security, home labs<br>and PC troubleshooting.</p></div></div>
   <div class="social-links"><a href="https://github.com/Doctoten" aria-label="Charlie on GitHub">{% include icon.html name='github' %}</a><a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS feed"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="5" cy="19" r="1"/><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/></svg></a></div>
   <button class="mobile-menu" aria-controls="site-nav" aria-expanded="false">{% include icon.html name='menu' %}<span>Menu</span></button>
   <nav id="site-nav" aria-label="Main navigation">

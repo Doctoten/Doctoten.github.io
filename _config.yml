@@ -29,3 +29,4 @@ header_pages:
 
 # Set a valid uploaded image path here to enable a background photo.
 background_image: "/assets/images/landscape.webp"
+avatar_image: "/assets/images/favicon.jpg"

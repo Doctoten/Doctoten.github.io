@@ -28,7 +28,8 @@ Optional: add `image: /assets/images/your-image.jpg` and `image_alt: "Descriptio
 - `projects.md`: projects; replace the existing placeholders with your actual work.
 - `assets/css/style.css`: colours, spacing and responsive layout.
 - Background: upload a real image into `assets/images/`, then set `background_image: "/assets/images/landscape.png"` in `_config.yml`. The current background is `landscape.webp`, an optimized copy of the uploaded `landscape.png`. To use a newly uploaded PNG directly, change `background_image` to its path. A blank value uses the plain background.
-- Favicon: the site uses `assets/images/favicon.jpg`. Replace that file to change the browser icon.
+- Favicon: the browser uses the C icon in `assets/images/favicon.svg`.
+- Sidebar avatar: replace `assets/images/favicon.jpg`, or set `avatar_image` in `_config.yml` to another uploaded image. This is separate from article cover images.
 - `_layouts/` and `_includes/`: page templates and shared elements.
 
 Search, categories, tags and archives update automatically from published posts. The light/dark choice is stored in the visitor's browser. No analytics, paid services or backend are required.
