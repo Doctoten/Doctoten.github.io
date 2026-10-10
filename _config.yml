@@ -26,3 +26,6 @@ defaults:
 header_pages:
   - about.md
   - projects.md
+
+# Set a valid uploaded image path here to enable a background photo.
+background_image: ""
