@@ -1,0 +1,9 @@
+title: Charlie's Tech Blog
+description: Cyber Security student sharing homelab projects and IT troubleshooting.
+url: "https://doctoten.github.io"
+baseurl: ""
+theme: minima
+
+header_pages:
+  - about.md
+  - projects.md
