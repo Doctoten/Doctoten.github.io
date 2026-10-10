@@ -2,5 +2,5 @@
 layout: default
 ---
 <header class="section-heading"><h1>Latest posts</h1><a href="{{ '/archives/' | relative_url }}">All posts →</a></header>
-<section class="post-list" aria-label="Recent posts">{% for post in site.posts limit: 10 %}{% include post-card.html post=post %}{% endfor %}
+<section class="post-list" aria-label="Recent posts">{% for post in site.posts limit: 10 %}{% include post-card.html post=post eager=forloop.first %}{% endfor %}
 {% if site.posts.size == 0 %}<div class="page-card empty-state"><p>No posts published yet.</p></div>{% endif %}</section>

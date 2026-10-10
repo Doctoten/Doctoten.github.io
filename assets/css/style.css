@@ -57,3 +57,7 @@
 
 .post-card .category-row{margin:0}.post-card .category-pill{font-size:14px}
 @media(max-width:650px){.post-card .category-pill{font-size:12px}}
+
+/* Reserve cover space before images load to avoid layout shifts. */
+.post-cover,.article-hero{aspect-ratio:16/9}.post-cover img,.article-hero img{display:block;width:100%;height:100%;max-height:none;object-fit:cover}.article-hero{margin:30px 30px 0;overflow:hidden;border-radius:10px}
+@media(max-width:650px){.article-hero{margin:20px 20px 0}}
