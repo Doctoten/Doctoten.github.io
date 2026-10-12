@@ -30,3 +30,5 @@ header_pages:
 # Set a valid uploaded image path here to enable a background photo.
 background_image: "/assets/images/landscape.webp"
 avatar_image: "/assets/images/favicon.jpg"
+share_image: "/assets/images/landscape.png"
+share_image_alt: "Jellyfish aquarium background of Charlie's Tech Blog"

@@ -21,6 +21,8 @@ Write the article below the front matter in Markdown. A future date will keep th
 
 Optional: add `image: /assets/images/your-image.jpg` and `image_alt: "Description of the image"` for a custom cover. Upload that image into `assets/images/`. Without an image, posts use a simple text listing.
 
+To choose an image for social link previews without adding an article cover, use `share_image: /assets/images/your-image.png` and `share_image_alt: "Description of the image"` in the post front matter. Previews use `share_image`, then `image`, then the site-wide `share_image` from `_config.yml`. Platforms may cache previews; existing messages may keep their old preview.
+
 ## Edit the site
 
 - `_config.yml`: title, description, timezone and site URL.

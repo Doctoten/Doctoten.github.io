@@ -5,6 +5,8 @@ date: 2026-10-11 19:00:00 +1000
 categories: [Home Lab]
 tags: [IT]
 description: "Quá trình thiết lập homelab bằng Proxmox."
+share_image: /assets/images/prox.png
+share_image_alt: "Proxmox VE virtualisation illustration"
 ---
 
 ## Giới thiệu
